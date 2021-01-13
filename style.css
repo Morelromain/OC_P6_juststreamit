@@ -1,0 +1,187 @@
+/* Eléments principaux de la page */
+
+body
+{
+    background: white;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #2f472b;
+}
+
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+}
+
+section h1, footer h1, nav a
+{
+    text-align: center;
+    font-family: Dayrom, serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+/* Header */
+
+header
+{
+    background: url('img/separateur.png') repeat-x bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+    color: #2f472b;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 100px;
+    height: 100px;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 3.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #2f472b;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+/* Bannière */
+
+#banniere_image
+{
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('img/bannierea.png') no-repeat;
+    position: relative;
+    box-shadow: 0px 4px 4px #1c1a19;
+    margin-bottom: 25px;
+}
+
+#banniere_description
+{
+    position: absolute;
+    bottom: 0;
+    border-radius: 5px 10px 10px 5px;
+    width: 25%;
+    height: 92%;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(24,24,24,0.8);
+    color: white;
+    font-size: 0.8em;
+    
+}
+
+.bouton_bleu
+{
+    position: absolute;
+    left: 25%;
+    bottom: 50%;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton_rouge
+{
+    height: 25px;
+    position: absolute;
+    left: 25%;
+    bottom: 25%;
+    background: url('img/fond_degraderouge.png') repeat-x;
+    border: 1px solid #940e10;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 30px 0px 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton_rouge img
+{
+    border: 0;
+}
+
+/* Corps */
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+article, aside
+{
+    text-align: justify;
+}
+
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+.ico_categorie
+{
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+article p
+{
+    font-size: 0.8em;
+}
