@@ -3,8 +3,8 @@
 body
 {
     background: white;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    color: #2f472b;
+    font-family: Arial, sans-serif;
+    color: rgb(73, 80, 94);
 }
 
 #bloc_page
@@ -13,7 +13,7 @@ body
     margin: auto;
 }
 
-section h1, footer h1, nav a
+section h1, nav a
 {
     text-align: center;
     font-family: Dayrom, serif;
@@ -25,48 +25,27 @@ section h1, footer h1, nav a
 
 header
 {
-    background: url('img/separateur.png') repeat-x bottom;
+    background: rgb(73, 80, 94) repeat-x bottom;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
-}
-
-#titre_principal
-{
-    display: flex;
-    flex-direction: column;
-    color: #2f472b;
+    height: 110px;
+    border-radius: 5px;
 }
 
 #logo
 {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-#logo img
-{
-    width: 100px;
-    height: 100px;
+  margin: 0 0 25px 5%;
+  color: #ffffff;
 }
 
 header h1
 {
-    font-family: 'BallparkWeiner', serif;
+    font-family: arial, serif;
     font-size: 3.5em;
     font-weight: normal;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 0;
 
-}
-
-header h2
-{
-    font-family: Dayrom, serif;
-    font-size: 1.1em;
-    margin-top: 0px;
-    font-weight: normal;
 }
 
 /* Navigation */
@@ -75,25 +54,29 @@ nav ul
 {
     list-style-type: none;
     display: flex;
+    margin-right: 0px;
 }
 
 nav li
 {
-    margin-right: 15px;
+    margin-right: 50px;
 }
 
-nav a
+nav h3
 {
+    font-family: arial, serif;
     font-size: 1.3em;
-    color: #2f472b;
+    color: #ffffff;
     padding-bottom: 3px;
     text-decoration: none;
 }
 
-nav a:hover
+#imagem
 {
-    color: #760001;
-    border-bottom: 3px solid #760001;
+  text-align: center;
+  font-family: Dayrom, serif;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 /* Bannière */
@@ -101,11 +84,10 @@ nav a:hover
 #banniere_image
 {
     margin-top: 15px;
-    height: 200px;
+    height: 268px;
     border-radius: 5px;
-    background: url('img/bannierea.png') no-repeat;
+    background: whitesmoke;
     position: relative;
-    box-shadow: 0px 4px 4px #1c1a19;
     margin-bottom: 25px;
 }
 
@@ -113,34 +95,43 @@ nav a:hover
 {
     position: absolute;
     bottom: 0;
-    border-radius: 5px 10px 10px 5px;
-    width: 25%;
-    height: 92%;
-    padding-top: 15px;
+    border-radius: 10px 10px 10px 10px;
+    width: 30%;
+    height: 100%;
     padding-left: 4px;
-    background-color: rgba(24,24,24,0.8);
-    color: white;
+
     font-size: 0.8em;
     
 }
 
-.bouton_bleu
+.best_title
 {
     position: absolute;
-    left: 25%;
-    bottom: 50%;
+    left: 30%;
+    top: 20%;
     font-size: 1.2em;
     text-align: center;
-    color: white;
-    text-decoration: none;
+    color: rgb(73, 80, 94);
+    font-family: arial, serif;
+    font-size: 1.3em;
+}
+.best_desc
+{
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 10%;
+  font-size: 1em;
+  text-align: center;
+  color: rgb(73, 80, 94);
 }
 
-.bouton_rouge
+.play
 {
     height: 25px;
     position: absolute;
-    left: 25%;
-    bottom: 25%;
+    left: 30%;
+    bottom: 50%;
     background: url('img/fond_degraderouge.png') repeat-x;
     border: 1px solid #940e10;
     border-radius: 5px;
@@ -151,37 +142,169 @@ nav a:hover
     text-decoration: none;
 }
 
-.bouton_rouge img
+.play img
 {
     border: 0;
 }
 
-/* Corps */
 
-section
-{
-    display: flex;
-    margin-bottom: 20px;
+/* Bloc à Carousel */
+.item {
+ margin:10px;
+ background-color:#fff;
+ box-shadow:0 15px 35px #3232321a,0 5px 15px #0000001a;
+ transition:transform .3s;
+ transform:translate3d(0,-1px,0)
+}
+.item:hover {
+ transform:translate3d(0,-10px,0)
+}
+.item img {
+ display:block;
+ width:100%;
+ height:auto
+}
+.item__body {
+ padding:25px
+}
+.item__title {
+ font-size:24px;
+ margin-bottom:5px;
+ font-weight:700;
+ color:#232323
+}
+.item__description {
+ color:#585858
 }
 
-article, aside
-{
-    text-align: justify;
+/* Caroussel */
+
+.carousel {
+  position: relative;
+  overflow-x:hidden
 }
 
-article
-{
-    margin-right: 20px;
-    flex: 3;
+.carousel__container {
+  transition: transform 0.3s;
+  transform: translate3d(0, 0, 0);
 }
 
-.ico_categorie
-{
-    vertical-align: middle;
-    margin-right: 8px;
+
+.caroussel__container::after {
+  content: '';
+  clear: both;
+  display: table;
 }
 
-article p
-{
-    font-size: 0.8em;
+.carousel__item {
+  float: left;
+}
+
+.carousel__next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(img/droite.jpg);
+  background-size: 20px 20px;
+  border-radius : 50%;
+  top: 50;
+  margin-top: 100px;
+  right : 30px;
+  box-shadow:0 15px 35px #3232321a,0 5px 15px #0000001a;
+  cursor: pointer;
+}
+
+.carousel__prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(img/gauche.jpg);
+  background-size: 20px 20px;
+  border-radius : 50%;
+  top: 50;
+  margin-top: 100px;
+  right: auto;
+  left: 30px;
+  box-shadow:0 15px 35px #3232321a,0 5px 15px #0000001a;
+  cursor: pointer;
+}
+
+
+/* Modale */
+/* Décrire l'animation */
+@keyframes slideDownFadeIN {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+}
+
+/* Foncer l'arrière-plan de la fenêtre modale */
+.modal {
+  display: none; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimer */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* la fenêtre modale  */
+.modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Le contenu de la modale */
+.modal-dialog .modal-content {
+  margin: auto;
+  background-color: #f3f3f3;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 1px #777 solid;
+  text-align: justify;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+  animation-name: slideDownFadeIN;
+  animation-duration: 0.5s;
+}
+
+/* Bouton servant à fermer la fenêtre modale */
+.closebtn {
+  text-decoration: none;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+headerm {
+  background-color: #5cb85c;
+  font-size: 25px;
+  color: white;
+}
+
+footerm {
+  background-color: #5cb85c;
+  font-size: 20px;
+  color: white;
 }
