@@ -1,185 +1,156 @@
-/* Eléments principaux de la page */
+/* Main elements */
 
-body
-{
-    background: white;
-    font-family: Arial, sans-serif;
-    color: rgb(73, 80, 94);
+body {
+  background: whitesmoke;
+  font-family: Arial, sans-serif;
+  color: rgb(73, 80, 94);
 }
 
-#bloc_page
-{
-    width: 1000px;
-    margin: auto;
-    
+#bloc_page {
+  width: 1000px;
+  margin: auto;
 }
 
-section h1, nav a
-{
-    text-align: center;
-    font-family: Arial, serif;
-    font-size: 2.5em;
-    text-transform: uppercase;
+section h1, h2, nav a {
+  text-align: center;
+  font-family: Arial, serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
 }
+
+
 
 /* Header */
 
-header
-{
-    background: rgb(73, 80, 94) repeat-x bottom;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 110px;
-    border-radius: 5px;
+header {
+  background: rgb(73, 80, 94) repeat-x bottom;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 110px;
+  border-radius: 5px;
 }
 
-#logo
-{
-  margin: 0 0 25px 5%;
+#logo {
+  margin: 0 0 15px 5%;
   color: #ffffff;
 }
 
-header h1
-{
-    font-family: arial, serif;
-    font-size: 3.5em;
-    font-weight: normal;
-    margin: 0 0 0 0;
-
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin-right: 0px;
+  margin-bottom: 40px;
 }
 
-/* Navigation */
-
-nav ul
-{
-    list-style-type: none;
-    display: flex;
-    margin-right: 0px;
+nav li {
+  margin-right: 50px;
 }
 
-nav li
-{
-    margin-right: 50px;
+nav a {
+  font-family: arial, serif;
+  font-size: 1.3em;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-decoration: none;
+  padding: 0px 0px 0px 0px;
 }
 
-nav h3
-{
-    font-family: arial, serif;
-    font-size: 1.3em;
-    color: #ffffff;
-    padding-bottom: 3px;
-    text-decoration: none;
+nav a:hover {
+  color: #b1acac;
 }
 
-#imagem
-{
+/* Banner */
+
+#banner {
+  margin-top: 15px;
+  height: 280px;
+  border-radius: 5px;
+  background: whitesmoke;
+  position: relative;
+  margin-bottom: 25px;
+  padding-top: 10px;
+}
+
+#banner_info {
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px 10px 10px 10px;
+  
+  width: 30%;
+  height: 100%;
+  padding-left: 4px;
+}
+
+#banner_img {
   text-align: center;
   font-family: Dayrom, serif;
   font-size: 3em;
   text-transform: uppercase;
 }
 
-/* Bannière */
-
-#banniere_image
-{
-    margin-top: 15px;
-    height: 268px;
-    border-radius: 5px;
-    background: whitesmoke;
-    position: relative;
-    margin-bottom: 25px;
+.best_title {
+  position: absolute;
+  left: 25%;
+  top: 18%;
+  font-size: 4em;
+  text-align: center;
+  color: rgb(73, 80, 94);
+  font-family: arial, serif;
+  font-size: 1.3em;
 }
 
-#banniere_description
-{
-    position: absolute;
-    bottom: 0;
-    border-radius: 10px 10px 10px 10px;
-    width: 30%;
-    height: 100%;
-    padding-left: 4px;
-
-    font-size: 0.8em;
-    
-}
-
-.best_title
-{
-    position: absolute;
-    left: 30%;
-    top: 20%;
-    font-size: 1.2em;
-    text-align: center;
-    color: rgb(73, 80, 94);
-    font-family: arial, serif;
-    font-size: 1.3em;
-}
-.best_desc
-{
+.best_desc {
   position: absolute;
   left: 5%;
-  right: 5%;
-  bottom: 10%;
-  font-size: 1em;
-  text-align: center;
+  top: 60%;
+  font-size: 1.0em;
   color: rgb(73, 80, 94);
 }
 
-.play
-{
-    height: 25px;
-    position: absolute;
-    left: 30%;
-    bottom: 50%;
-    background: url('img/fond_degraderouge.png') repeat-x;
-    border: 1px solid #940e10;
-    border-radius: 5px;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 3px 30px 0px 30px;
-    color: white;
-    text-decoration: none;
+.play {
+  height: 25px;
+  position: absolute;
+  left: 30%;
+  bottom: 50%;
+  background: url('img/button.png') repeat-x;
+  border: 1px solid #940e10;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 3px 30px 0px 30px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.play img
-{
-    border: 0;
+.play:hover {
+  color: #b1acac;
 }
 
+/* Carousel */
 
-
-
-/* Bloc à Carousel */
 .item {
- margin:20px;
- background-color:#fff;
- transition:transform .3s;
- transform:translate3d(0,-1px,0)
-}
-.item:hover {
- transform:translate3d(0,-10px,0)
-}
-.item img {
- display:block;
- width:100%;
- height:auto
-}
-.item__body {
- padding:25px
-}
-.item__title {
- font-size:24px;
- margin-bottom:5px;
- font-weight:700;
- color:#232323
-}
-.item__description {
- color:#585858
+  margin:20px;
+  background-color:#fff;
+  transition:transform .3s;
+  transform:translate3d(0,-1px,0);
+  cursor: pointer;
 }
 
-/* Caroussel */
+.item:hover {
+  transform:translate3d(0,-10px,0);
+}
+
+.item img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.item__body {
+  padding:25px;
+}
 
 .carousel {
   background: whitesmoke;
@@ -194,7 +165,6 @@ nav h3
   transition: transform 0.3s;
   transform: translate3d(0, 0, 0);
 }
-
 
 .caroussel__container::after {
   content: '';
@@ -219,6 +189,10 @@ nav h3
   cursor: pointer;
 }
 
+.carousel__next:hover {
+  background-image: url(img/right_h.png);
+}
+
 .carousel__prev {
   position: absolute;
   width: 45px;
@@ -232,86 +206,75 @@ nav h3
   cursor: pointer;
 }
 
-
-
-
-
-
-/* Modale */
-/* Décrire l'animation */
-@keyframes slideDownFadeIN {
-    from {top:-100px;opacity: 0;}
-    to {top:0px;opacity:1;}
+.carousel__prev:hover {
+  background-image: url(img/left_h.png);
 }
 
-/* Foncer l'arrière-plan de la fenêtre modale */
+.carousel__prev--hidden, .carousel__next--hidden {
+  opacity: 0;
+}
+
+/* Modal */
+
 .modal {
-  display: none; 
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.822); /* Black w/ opacity */
 }
 
-/* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimer */
-.modal:target {
-  display: table;
-  position: absolute;
-}
-
-/* la fenêtre modale  */
-.modal-dialog {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/* Le contenu de la modale */
-.modal-dialog .modal-content {
+.modal-content {
+  background-color: whitesmoke;
+  height: 60%;
   margin: auto;
-  background-color: #f3f3f3;
-  position: relative;
-  padding: 0;
-  outline: 0;
-  border: 1px #777 solid;
-  text-align: justify;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
-  animation-name: slideDownFadeIN;
-  animation-duration: 0.5s;
+  padding: 50px;
+  border: 5px solid rgb(73, 80, 94);
+  width: 60%;
 }
 
-/* Bouton servant à fermer la fenêtre modale */
-.closebtn {
-  text-decoration: none;
+.id_img {
+  position: absolute;
+  width: 45px;
+  height: 50px;
+  background-color: rgb(238, 223, 92);
+}
+
+
+.id_info {
+  position: absolute;
+  margin-left: 210px;
+  margin-top: 35px;
+  margin-right: 20%;
+}
+
+.id_other{
+  position: absolute;
+  margin-top: 300px;
+  margin-right: 20%;
+}
+
+
+
+.close {
+  color: rgb(73, 80, 94);
   float: right;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: bold;
-  color: #fff;
 }
 
-.closebtn:hover,
-.closebtn:focus {
+.close:hover,
+.close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-.container {
-  padding: 2px 16px;
-}
 
-headerm {
-  background-color: #5cb85c;
-  font-size: 25px;
-  color: white;
-}
 
-footerm {
-  background-color: #5cb85c;
-  font-size: 20px;
-  color: white;
-}
