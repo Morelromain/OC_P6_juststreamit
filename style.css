@@ -13,7 +13,6 @@ body {
 
 section h1, h2, nav a {
   text-align: center;
-  font-family: Arial, serif;
   font-size: 2.5em;
   text-transform: uppercase;
 }
@@ -27,11 +26,11 @@ header {
   align-items: flex-end;
   height: 110px;
   border-radius: 5px;
+  color: #ffffff;
 }
 
 #logo {
   margin: 0 0 15px 5%;
-  color: #ffffff;
 }
 
 nav ul {
@@ -46,12 +45,10 @@ nav li {
 }
 
 nav a {
-  font-family: arial, serif;
   font-size: 1.3em;
   color: #ffffff;
   margin-bottom: 25px;
   text-decoration: none;
-  padding: 0px 0px 0px 0px;
 }
 
 nav a:hover {
@@ -64,7 +61,6 @@ nav a:hover {
   margin-top: 15px;
   height: 280px;
   border-radius: 5px;
-  background: whitesmoke;
   position: relative;
   margin-bottom: 25px;
   padding-top: 10px;
@@ -74,7 +70,6 @@ nav a:hover {
   position: absolute;
   bottom: 0;
   border-radius: 10px 10px 10px 10px;
-  
   width: 30%;
   height: 100%;
   padding-left: 4px;
@@ -82,31 +77,24 @@ nav a:hover {
 
 #banner_img {
   text-align: center;
-  font-family: Dayrom, serif;
-  font-size: 3em;
-  text-transform: uppercase;
 }
 
-.best_title {
+#best_title {
   position: absolute;
   left: 25%;
   top: 18%;
-  font-size: 4em;
   text-align: center;
-  color: rgb(73, 80, 94);
   font-family: arial, serif;
   font-size: 1.3em;
 }
 
-.best_desc {
+#best_desc {
   position: absolute;
   left: 5%;
   top: 60%;
-  font-size: 1.0em;
-  color: rgb(73, 80, 94);
 }
 
-.play {
+#play {
   height: 25px;
   position: absolute;
   left: 30%;
@@ -122,7 +110,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.play:hover {
+#play:hover {
   color: #b1acac;
 }
 
@@ -130,7 +118,6 @@ nav a:hover {
 
 .item {
   margin:20px;
-  background-color:#fff;
   transition:transform .3s;
   transform:translate3d(0,-1px,0);
   cursor: pointer;
@@ -146,12 +133,7 @@ nav a:hover {
   height:auto;
 }
 
-.item__body {
-  padding:25px;
-}
-
 .carousel {
-  background: whitesmoke;
   border-radius: 5px;
   position: relative;
   overflow-x:hidden;
@@ -159,22 +141,16 @@ nav a:hover {
   padding:0px 20px;
 }
 
-.carousel__container {
+.carousel_container {
   transition: transform 0.3s;
   transform: translate3d(0, 0, 0);
 }
 
-.caroussel__container::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
-.carousel__item {
+.carousel_item {
   float: left;
 }
 
-.carousel__next {
+.carousel_next {
   position: absolute;
   width: 40px;
   height: 50px;
@@ -187,11 +163,11 @@ nav a:hover {
   cursor: pointer;
 }
 
-.carousel__next:hover {
+.carousel_next:hover {
   background-image: url(img/right_h.png);
 }
 
-.carousel__prev {
+.carousel_prev {
   position: absolute;
   width: 45px;
   height: 50px;
@@ -204,11 +180,11 @@ nav a:hover {
   cursor: pointer;
 }
 
-.carousel__prev:hover {
+.carousel_prev:hover {
   background-image: url(img/left_h.png);
 }
 
-.carousel__prev--hidden, .carousel__next--hidden {
+.carousel_prev--hidden, .carousel_next--hidden {
   opacity: 0;
 }
 
