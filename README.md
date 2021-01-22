@@ -4,7 +4,7 @@ User interface for a Python web video application (local website)
 
 ## Installation
 
-### OCMovies-API
+### REST API
 
 `https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR`
 
