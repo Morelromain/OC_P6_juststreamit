@@ -15,7 +15,7 @@ Follow instruction in the README OCMovies-API for :
 ### Web server
 
 1. Install an Apache server (I recommend Xampp distribution)
-2. Clone or Copy this repository in ur local website folder (ex : htdocs for Xampp)
+2. Clone or Copy this repository in local website folder (ex : htdocs for Xampp)
 3. Start Apache server
 
 ## Start the user interface
