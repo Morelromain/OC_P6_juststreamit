@@ -11,12 +11,6 @@ body {
   margin: auto;
 }
 
-section h1, h2, nav a {
-  text-align: center;
-  font-size: 2.5em;
-  text-transform: uppercase;
-}
-
 /* Header */
 
 header {
@@ -116,6 +110,12 @@ nav a:hover {
 
 /* Carousel */
 
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
 .item {
   margin:20px;
   transition:transform .3s;
@@ -143,49 +143,37 @@ nav a:hover {
 
 .carousel_container {
   transition: transform 0.3s;
-  transform: translate3d(0, 0, 0);
 }
 
 .carousel_item {
   float: left;
 }
 
-.carousel_next {
+.carousel_next, .carousel_prev {
   position: absolute;
-  width: 40px;
+  width: 45px;
   height: 50px;
-  background-image: url(img/right.png);
   background-size: 40px 50px;
   top: 50px;
   margin-top: 100px;
   left: auto;
-  right: 0px;
   cursor: pointer;
 }
 
+.carousel_next {
+  background-image: url(img/right.png);
+  right: 0px;
+}
 .carousel_next:hover {
   background-image: url(img/right_h.png);
 }
 
 .carousel_prev {
-  position: absolute;
-  width: 45px;
-  height: 50px;
   background-image: url(img/left.png);
-  background-size: 40px 50px;
-  top: 50px;
-  margin-top: 100px;
-  right: auto;
   left: 0px;
-  cursor: pointer;
 }
-
 .carousel_prev:hover {
   background-image: url(img/left_h.png);
-}
-
-.carousel_prev--hidden, .carousel_next--hidden {
-  opacity: 0;
 }
 
 /* Modal */
@@ -222,7 +210,6 @@ nav a:hover {
   background-color: rgb(238, 223, 92);
 }
 
-
 .id_info {
   position: absolute;
   margin-left: 210px;
@@ -245,8 +232,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
