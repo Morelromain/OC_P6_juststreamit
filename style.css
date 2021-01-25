@@ -201,23 +201,18 @@ h2 {
   overflow: auto;
 }
 
-.id_img {
+.id_img, .id_info, .id_other {
   position: absolute;
-  width: 45px;
-  height: 50px;
-  background-color: rgb(238, 223, 92);
 }
 
 .id_info {
-  position: absolute;
   margin-left: 210px;
   margin-top: 35px;
   margin-right: 20%;
   min-width: 650px;
 }
 
-.id_other{
-  position: absolute;
+.id_other {
   margin-top: 300px;
   margin-right: 20%;
   min-width: 650px;
