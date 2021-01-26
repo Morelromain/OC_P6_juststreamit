@@ -1,5 +1,4 @@
 // variable declaration
-
 var url_best = "http://localhost:8000/api/v1/titles/?sort_by=-imdb_score";
 var url_best2 = "http://localhost:8000/api/v1/titles/?page=2&sort_by=-imdb_score";
 var url_adventure = "http://localhost:8000/api/v1/titles/?genre=Adventure&sort_by=-imdb_score";
@@ -8,7 +7,6 @@ var url_comedy = "http://localhost:8000/api/v1/titles/?genre=Comedy&sort_by=-imd
 var url_comedy2 = "http://localhost:8000/api/v1/titles/?genre=Comedy&page=2&sort_by=-imdb_score";
 var url_horror = "http://localhost:8000/api/v1/titles/?genre=Horror&sort_by=-imdb_score";
 var url_horror2 = "http://localhost:8000/api/v1/titles/?genre=Horror&page=2&sort_by=-imdb_score";
-
 var list_best = [
   document.getElementById("best_1"), document.getElementById("best_2"),
   document.getElementById("best_3"), document.getElementById("best_4"),
