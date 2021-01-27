@@ -43,17 +43,25 @@ var id_description  = document.getElementById("id_description");
 // function print_info when clicks
 play.onclick = function() {print_info(best_1)};
 for (let nb in btn_best) {
-  btn_best[nb].onclick = function() {print_info(list_best[nb])};
-}
+  btn_best[nb].onclick = function() {
+    if (list_best[nb].innerHTML) {
+      print_info(list_best[nb])
+}}}
 for (let nb in btn_advent) {
-  btn_advent[nb].onclick = function() {print_info(list_adventure[nb])};
-}
+  btn_advent[nb].onclick = function() {
+    if (list_adventure[nb].innerHTML) {
+      print_info(list_adventure[nb])
+}}}
 for (let nb in btn_comedy) {
-  btn_comedy[nb].onclick = function() {print_info(list_comedy[nb])};
-}
+  btn_comedy[nb].onclick = function() {
+    if (list_comedy[nb].innerHTML) {
+    print_info(list_comedy[nb])
+}}}
 for (let nb in btn_horror) {
-  btn_horror[nb].onclick = function() {print_info(list_horror[nb])};
-}
+  btn_horror[nb].onclick = function() {
+    if (list_horror[nb].innerHTML) {
+    print_info(list_horror[nb])
+}}}
 
 // function close modal when cliks
 span.onclick = function() {
@@ -92,5 +100,6 @@ function print_info(url) {
   })
   .catch(function(error) { 
     console.log(error);
+  
   });
 }
