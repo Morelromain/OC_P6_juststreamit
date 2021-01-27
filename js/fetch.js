@@ -34,12 +34,14 @@ var best_desc = document.getElementById("best_desc");
 // function fetch per category
 function fetch_cat(url, list) {
   fetch(url).then(resp => {
-    if(resp.ok){resp.json().then(data => {
+    if(resp.ok){
+      resp.json().then(data => {
       for (let nb = 0; nb < 5; nb++) {
         list[nb].src = data.results[nb].image_url;
         list[nb].innerHTML = data.results[nb].url}
       fetch(data.next).then(resp => {
-        if(resp.ok){resp.json().then(data => {
+        if(resp.ok){
+          resp.json().then(data => {
           for (let nb = 0; nb < 2; nb++) {
             list[nb+5].src = data.results[nb].image_url;
             list[nb+5].innerHTML = data.results[nb].url}
@@ -67,9 +69,7 @@ function fetch_top(url) {
         })
         .catch(error => {console.log(error)});
       })
-    } else {
-      console.log("bad response url");
-    }
+    } else {console.log("bad response url")};
   })
   .catch(error => {console.log(error)});
 }
