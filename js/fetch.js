@@ -46,13 +46,13 @@ function fetch_cat(url, list) {
             list[nb+5].src = data.results[nb].image_url;
             list[nb+5].innerHTML = data.results[nb].url}
         })
-        } else {console.log("bad response url")};
+        } else {console.log("bad network response")};
       })
-      .catch(function(error) {console.log(error)});
+      .catch(function(error) {console.log("fetch operation problem" + error.message)});
     })
-  } else {console.log("bad response url")};
+  } else {console.log("bad network response")};
   })
-  .catch(function(error) {console.log(error)});
+  .catch(function(error) {console.log("fetch operation problem" + error.message)});
 }
 
 // function fetch for banner
@@ -67,11 +67,11 @@ function fetch_top(url) {
           best_title.innerHTML = data.title;
           best_desc.innerHTML = data.description
         })
-        .catch(error => {console.log(error)});
+        .catch(error => {console.log("fetch operation problem" + error.message)});
       })
     } else {console.log("bad response url")};
   })
-  .catch(error => {console.log(error)});
+  .catch(error => {console.log("fetch operation problem" + error.message)});
 }
 
 // fetch
