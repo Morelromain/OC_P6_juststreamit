@@ -62,4 +62,3 @@ new Carousel(document.querySelector("#carousel1"))
 new Carousel(document.querySelector("#carousel2"))
 new Carousel(document.querySelector("#carousel3"))
 new Carousel(document.querySelector("#carousel4"))
-
