@@ -78,28 +78,27 @@ window.onclick = function(event) {
 // Function print modal info
 function print_info(url) {
   modal.style.display = "block";
-  fetch(url.innerHTML)
-  .then((resp) => resp.json())
-  .then(function(data) {
-    id_image_url.src = data.image_url
-    id_title.innerHTML = data.original_title
-    id_genres.innerHTML = "<b>Genre(s) : </b>" + data.genres
-    id_date_published.innerHTML = "<b>Date de sortie : </b>" + data.date_published
-    id_rated.innerHTML = "<b>Restriction : </b>" + data.rated
-    if (id_rated.innerHTML == "<b>Restriction : </b>Not rated or unkown rating") 
-      {id_rated.innerHTML = "<b>Tous public</b>"}
-    id_imdb_score.innerHTML = "<b>Score IMDB : </b>" + data.imdb_score
-    id_directors.innerHTML = "<b>Réalisateur(s) : </b>" + data.directors
-    id_actors.innerHTML = "<br><b>Acteur(s) : </b>" + data.actors
-    id_duration.innerHTML = "<b>Durée : </b>" + data.duration + " min"
-    id_countries.innerHTML = "<b>Pays d'origine : </b>" + data.countries
-    id_worldwide_gross_income.innerHTML = "<b>Résultat au Box Office : </b>" + data.worldwide_gross_income + " $"
-    if (id_worldwide_gross_income.innerHTML == "<b>Résultat au Box Office : </b>null $") 
-      {id_worldwide_gross_income.innerHTML = "<b>Résultat au Box Office : </b>inconnu"}
-    id_description.innerHTML = "<b>Résumé du film : </b>" + data.long_description
+  fetch(url.innerHTML).then(resp => {
+    if(resp.ok){
+      resp.json().then(data => {
+        id_image_url.src = data.image_url;
+        id_title.innerHTML = data.original_title;
+        id_genres.innerHTML = "<b>Genre(s) : </b>" + data.genres;
+        id_date_published.innerHTML = "<b>Date de sortie : </b>" + data.date_published;
+        id_rated.innerHTML = "<b>Restriction : </b>" + data.rated;
+        if (id_rated.innerHTML == "<b>Restriction : </b>Not rated or unkown rating");
+          {id_rated.innerHTML = "<b>Tous public</b>"};
+        id_imdb_score.innerHTML = "<b>Score IMDB : </b>" + data.imdb_score;
+        id_directors.innerHTML = "<b>Réalisateur(s) : </b>" + data.directors;
+        id_actors.innerHTML = "<br><b>Acteur(s) : </b>" + data.actors;
+        id_duration.innerHTML = "<b>Durée : </b>" + data.duration + " min";
+        id_countries.innerHTML = "<b>Pays d'origine : </b>" + data.countries;
+        id_worldwide_gross_income.innerHTML = "<b>Résultat au Box Office : </b>" + data.worldwide_gross_income + " $";
+        if (id_worldwide_gross_income.innerHTML == "<b>Résultat au Box Office : </b>null $");
+          {id_worldwide_gross_income.innerHTML = "<b>Résultat au Box Office : </b>inconnu"};
+        id_description.innerHTML = "<b>Résumé du film : </b>" + data.long_description;
+      })
+    } else {console.log("bad network response")};
   })
-  .catch(function(error) { 
-    console.log(error);
-  
-  });
+  .catch(function(error) {console.log("fetch operation problem" + error.message)});
 }
