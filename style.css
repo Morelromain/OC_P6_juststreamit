@@ -1,7 +1,7 @@
 /* Main elements */
 
 body {
-  background: whitesmoke;
+  background: rgb(245, 245, 245);
   font-family: Arial, sans-serif;
   color: rgb(73, 80, 94);
 }
@@ -191,7 +191,7 @@ h2 {
 }
 
 .modal-content {
-  background-color: whitesmoke;
+  background-color: rgb(245, 245, 245);
   height: 550px;
   width: 60%;
   min-width: 800px;
